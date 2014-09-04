@@ -90,3 +90,32 @@ ans_4 = raw_input()
 
 #Populate answers array with user input
 answers.append(ans_4)
+
+print "--------------------------------------------------------------------"
+print "Choose the word you think best fills in the blank:"
+print full_story["sen_6"] + " " + blank_space + " " + full_story["sen_7"]
+
+#Create for loop to display array contents
+for n in numbers:
+        print n
+
+#User inputs the answer to question 5
+ans_5 = raw_input()
+
+#Populate answers array with user input
+answers.append(ans_5)
+
+#Define the printout function
+'''
+def finResults(f,a):
+	results = f + a
+	return results
+
+r = finResults(full_story["sen_1"],answers[0])
+'''
+def finalResults():
+	for s in full_story:
+		for a in answers:
+			a += full_story[s]
+			return a
+print finalResults()
