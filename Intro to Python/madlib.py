@@ -131,3 +131,9 @@ print "--------------------------------------------------------------------"
 
 #Thank users for playing
 print "Thank you " + user_name + " for playing the Kbeazer Madlib Game!" 
+
+#Error Conditionals
+if answers = "":
+	print "Please enter a valid selection to continue"
+else:
+	pass
