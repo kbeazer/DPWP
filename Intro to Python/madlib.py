@@ -106,21 +106,24 @@ ans_5 = raw_input()
 answers.append(ans_5)
 
 #Define the printout function
-'''
 def finResults(f,a):
 	results = f + a
 	return results
 
-r = finResults(full_story["sen_1"],answers[0])
+
+
+#r = finResults(full_story["sen_1"],answers[0])
 
 '''
 def finalResults():
 	for s in full_story:
 		stories = []
 		stories.append(full_story[s])
-		#return stories
+		return stories
+		print stories
 		for a in answers:
-			stories += a
-			return a
+			result = []
+			result.append(answers[a])
+			return stories + result
 print finalResults()
-
+'''
