@@ -105,6 +105,13 @@ ans_5 = raw_input()
 #Populate answers array with user input
 answers.append(ans_5)
 
+#Alert the user that the game is over
+print "You're all done!"
+
+#Initiate the printout
+result_print = raw_input("Press enter to see your results...")
+print "--------------------------------------------------------------------"
+
 #Define the printout function
 def finResults(f,a):
 	results = f + " " + a + " "
@@ -118,18 +125,9 @@ fourth = finResults(full_story["sen_4"], answers[3])
 fifth = finResults(full_story["sen_5"], full_story["sen_6"])
 sixth = finResults(answers[4], full_story["sen_7"])
 
+#Print the results of the storyline
 print first+second+third+fourth+fifth+sixth
+print "--------------------------------------------------------------------"
 
-'''
-def finalResults():
-	for s in full_story:
-		stories = []
-		stories.append(full_story[s])
-		return stories
-		print stories
-		for a in answers:
-			result = []
-			result.append(answers[a])
-			return stories + result
-print finalResults()
-'''
+#Thank users for playing
+print "Thank you " + user_name + " for playing the Kbeazer Madlib Game!" 
