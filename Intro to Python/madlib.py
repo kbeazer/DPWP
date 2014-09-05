@@ -27,7 +27,7 @@ numbers = ["27","3","34","17","8"]
 full_story = dict()
 
 #Populate the dictionary object with user selections
-full_story = {"sen_1": "Frank is by far the most original person that you could meet.","sen_2": "He has a total of","sen_3":"pairs of golden jeans.","sen_4":"of those jeans actually belong to the","sen_5":"members of the armed forces of Peru.","sen_6":"They don't mind though, the","sen_7":"year old boss said that it was ok"}
+full_story = {"sen_1": "Frank is by far the most original person that you could meet.","sen_2": "He has a total of","sen_3":"pairs of golden jeans.","sen_4":"of those jeans actually belong to the","sen_5":"members of the armed forces of Peru.","sen_6":"They don't mind though, the","sen_7":"year old boss said that it was ok."}
 
 #Create the storyline
 print "--------------------------------------------------------------------"
@@ -107,19 +107,18 @@ answers.append(ans_5)
 
 #Define the printout function
 def finResults(f,a):
-	results = f + " " + a
+	results = f + " " + a + " "
 	return results
 
 #Call out function with both parameters included
 first = finResults(answers[0], full_story["sen_1"])
 second = finResults(full_story["sen_2"], answers[1])
-third = finResults(full_story["sen_3"],answers[2])
-fourth = finResults(answers[3], full_story["sen_4"])
-fifth = finResults(full_story["sen_5"],answers[4])
-sixth = finResults(full_story["sen_6"],answers[5])
+third = finResults(full_story["sen_3"], answers[2])
+fourth = finResults(full_story["sen_4"], answers[3])
+fifth = finResults(full_story["sen_5"], full_story["sen_6"])
+sixth = finResults(answers[4], full_story["sen_7"])
 
-
-print first
+print first+second+third+fourth+fifth+sixth
 
 '''
 def finalResults():
