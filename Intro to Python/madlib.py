@@ -112,10 +112,15 @@ def finResults(f,a):
 	return results
 
 r = finResults(full_story["sen_1"],answers[0])
+
 '''
 def finalResults():
 	for s in full_story:
+		stories = []
+		stories.append(full_story[s])
+		#return stories
 		for a in answers:
-			a += full_story[s]
+			stories += a
 			return a
 print finalResults()
+
