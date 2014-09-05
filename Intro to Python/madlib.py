@@ -8,6 +8,14 @@ I'm still very new to python itself, but I hope you enjoy playing along! :)
 #Raw Input is being used to display user name information
 user_name = raw_input("Please enter your first name ")
 
+#User name validation
+if user_name == "":
+	print "Please enter your first name to continue"
+	import sys
+	sys.exit()
+else:
+	pass
+
 #Display user name along with welcome message
 print "Hello " + user_name + ", welcome to the KBeazer Madlib Game!"
 
@@ -133,7 +141,7 @@ print "--------------------------------------------------------------------"
 print "Thank you " + user_name + " for playing the Kbeazer Madlib Game!" 
 
 #Error Conditionals
-if answers = "":
+if answers == "":
 	print "Please enter a valid selection to continue"
 else:
 	pass
