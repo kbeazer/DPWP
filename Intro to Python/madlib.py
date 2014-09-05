@@ -107,12 +107,19 @@ answers.append(ans_5)
 
 #Define the printout function
 def finResults(f,a):
-	results = f + a
+	results = f + " " + a
 	return results
 
+#Call out function with both parameters included
+first = finResults(answers[0], full_story["sen_1"])
+second = finResults(full_story["sen_2"], answers[1])
+third = finResults(full_story["sen_3"],answers[2])
+fourth = finResults(answers[3], full_story["sen_4"])
+fifth = finResults(full_story["sen_5"],answers[4])
+sixth = finResults(full_story["sen_6"],answers[5])
 
 
-#r = finResults(full_story["sen_1"],answers[0])
+print first
 
 '''
 def finalResults():
