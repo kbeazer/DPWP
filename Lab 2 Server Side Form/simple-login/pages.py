@@ -10,10 +10,6 @@ class Welcome(object):
         <link href="{self.css}" rel="stylesheet" type="text/css" />
     </head>
     <body>"""
-        self.error = '''<p>Please fill out all fields to continue.</p>'''
-        self.success = '''<h1>Congratulations!</h1>
-        <p>Thank you {self.user}</p>'''
-
         self.body = '''<h1>What's The Buzz</h1>
         <h2>Find out what events are going down in your city.</h2>
         <h3>Sign up and get access today. Don't miss out!</h3>
@@ -35,10 +31,9 @@ class Welcome(object):
             <input type="password" />
             <label>Confirm</label>
             <input type="password" />
-            <input class="spacer" type="submit" value="Submit" />
+            <input class="spacer button" type="submit" value="Submit" />
         </form>
         '''
-
 
         self.close = """
     </body>
@@ -49,6 +44,7 @@ class Welcome(object):
         all = self.head + self.body + self.close
         all = all.format(**locals())
         return all
+
 
 class Sucess(object):
     def __init__(self):

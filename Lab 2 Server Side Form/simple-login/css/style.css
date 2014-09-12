@@ -1,5 +1,5 @@
 body{
-    background-color: #153a60;
+    background: #153a60;
     width: 50%;
     margin: 0 auto;
 }
@@ -12,6 +12,13 @@ body{
 .inline{
     display: inline-block;
     clear: none;
+}
+.button{
+    width: 100px;
+    background: #153a60;
+    color: #ededed;
+    padding-bottom: 10px;
+    margin-top: 15px;
 }
 h1{
     font-size: 40px;
