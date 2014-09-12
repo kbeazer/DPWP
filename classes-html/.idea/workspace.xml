@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pages.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pages.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.49655172" vertical-offset="0" max-vertical-offset="725">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -55,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.yaml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.yaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17142858" vertical-offset="0" max-vertical-offset="700">
+            <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="390">
               <caret line="8" column="17" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="17" />
               <folding />
             </state>
@@ -347,10 +347,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages.py">
+    <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="390">
+          <caret line="8" column="17" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -365,10 +365,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.yaml">
+    <entry file="file://$PROJECT_DIR$/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17142858" vertical-offset="0" max-vertical-offset="700">
-          <caret line="8" column="17" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.49655172" vertical-offset="0" max-vertical-offset="725">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
