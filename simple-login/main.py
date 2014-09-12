@@ -19,7 +19,6 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
             #stores the information received from the form
             user = self.request.GET['user']
-            
             self.response.write(user + "," + " " + s.print_out())
         else:
             self.response.write(self.error) #prints out the information on the screen
