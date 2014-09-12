@@ -6,29 +6,24 @@ Simple Form
 '''
 
 import webapp2
-#from pages import Welcome
+from pages import Welcome
+from pages import Sucess
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        page_head = '''<!DOCTYPE HTML>
-<html>
-    <head>
-    <title>What's The Buzz</title>
-    </head>
-    <body>'''
+        w = Welcome()
+        s = Sucess()
+        self.response.write(w.print_out())
 
 
-        page_close = '''
-        </form>
-    </body>
-</html>'''
         if self.request.GET:
             #stores the information received from the form
             user = self.request.GET['user']
-            email = self.request.GET['city']
-            self.response.write(page_head + user + ' ' + email + page_body + page_close)
+            
+            self.response.write(user + "," + " " + s.print_out())
         else:
-            self.response.write(page_head + page_body + page_close) #prints out the information on the screen
+            self.response.write(self.error) #prints out the information on the screen
+
 
 #Never touch or modify this code
 app = webapp2.WSGIApplication([

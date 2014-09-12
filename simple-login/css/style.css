@@ -1,0 +1,43 @@
+body{
+    background-color: #153a60;
+    width: 50%;
+    margin: 0 auto;
+}
+.spacer{
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid black;
+    width: 100%;
+}
+.inline{
+    display: inline-block;
+    clear: none;
+}
+h1{
+    font-size: 40px;
+    margin-bottom: 0;
+    color: #efefef;
+    font-family: arial;
+    letter-spacing: 1.5px;
+}
+h2, h3{
+    color: #efefef;
+    letter-spacing: 1.5px;
+}
+form{
+    background: #efefef;
+    padding: 20px;
+    height: 550px;
+}
+label, input, p{
+    float: left;
+    clear: both;
+}
+label{
+    font-family: arial;
+    font-weight: bold;
+    color: #153a60;
+}
+p{
+    margin: 0;
+}
