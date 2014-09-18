@@ -13,7 +13,22 @@ class HomePage(object):
         """
 
         self.body = """
+        <div>
+            <h1>Compare and Select</h1>
+            <p>Find a product that best suits your financial needs.</p>
+        </div>
 
+        <nav>
+            <ul>
+                <li>XBox1</li>
+                <li>PS4</li>
+                <li>Wii U</li>
+                <li>XBox 360</li>
+                <li>PS3</li>
+            </ul>
+        </nav>
+        <div></div>
+        <div></div>
 
         """
         self.close = """
