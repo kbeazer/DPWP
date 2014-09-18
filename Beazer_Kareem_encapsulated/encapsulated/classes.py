@@ -57,7 +57,7 @@ class HomePage(object):
 
 class Xbox1(object):
     def __init__(self):
-        self.price = 399.99
+        self.price = 319.99
         self.display = """
         <ul>
             <li>User Rating:  9.5/10</li>
@@ -70,11 +70,6 @@ class Xbox1(object):
             <input type="submit" value="Xbox 1" name="platform" />
         </form>
         """
-
-    def discount(self):
-        percentage = self.price * .20
-        price = self.price - percentage
-        return price
 
     def print_dis(self):  # sets print function
         display = self.display + self.button
@@ -180,3 +175,4 @@ class Success(object):
         all = self.head + self.body + self.close
         all = all.format(**locals())
         return all
+
