@@ -1,5 +1,6 @@
 class HomePage(object):
     def __init__(self):  # generates the home page view.
+        self.error = "Please select an option to continue."
         self.title = "Gamers World"  # sets the title attribute for the page.
         self.css = "css/style.css"  # sets the location of the css file.
         self.head =  """
@@ -56,7 +57,6 @@ class HomePage(object):
 
 class Xbox1(object):
     def __init__(self):
-        success = Success()
         self.view = "Xbox 1"
         self.display = """
         <ul>
@@ -67,7 +67,7 @@ class Xbox1(object):
         """
         self.button = """
         <form method="GET">
-            <input type="submit" value="Select" button() />
+            <input type="submit" value="Xbox 1" name="platform" />
         </form>
         """
 
@@ -86,7 +86,7 @@ class PS4(object):
         """
         self.button = """
         <form method="GET">
-            <input type="submit" value="Select" />
+            <input type="submit" value="PS4" name="platform" />
         </form>
         """
     def print_dis(self):
@@ -102,7 +102,7 @@ class Wii(object):
             <li>Community:  Medium</li>
         </ul>
         <form method="GET">
-            <input type="submit" value="Select" />
+            <input type="submit" value="Wii U" name="platform" />
         </form>
 
         """
