@@ -17,13 +17,21 @@
 import webapp2
 from classes import HomePage
 from classes import Xbox1
+from classes import PS4
+from classes import Wii
+from classes import Xbox360
+from classes import PS3
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         h = HomePage()
         x = Xbox1()
+        ps4 = PS4()
+        w = Wii()
+        x360 = Xbox360()
+        ps3 = PS3()
         self.response.write(h.print_out())
-        self.response.write(x.print_dis())
+       
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

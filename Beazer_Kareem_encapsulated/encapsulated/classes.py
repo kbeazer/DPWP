@@ -21,10 +21,15 @@ class HomePage(object):
         <nav>
             <ul>
                 <li>XBox 1</li>
+                {self.xbox1}
                 <li>PS4</li>
+                {self.ps4}
                 <li>Wii U</li>
+                {self.wii}
                 <li>XBox 360</li>
+                {self.x360}
                 <li>PS3</li>
+                {self.ps3}
             </ul>
         </nav>
 
@@ -36,6 +41,12 @@ class HomePage(object):
     </body>
 </html>
         """
+
+        self.xbox1 = Xbox1().print_dis()
+        self.ps4 = PS4().print_dis()
+        self.wii = Wii().print_dis()
+        self.x360 = Xbox360().print_dis()
+        self.ps3 = PS3().print_dis()
 
     def print_out(self):
         all = self.head + self.body + self.close
@@ -55,3 +66,60 @@ class Xbox1(object):
     def print_dis(self):
         display = self.display
         return display
+
+class PS4(object):
+    def __init__(self):
+        self.display = """
+        <ul>
+            <li>User Rating:  8.0/10</li>
+            <li>Price:  $499.99</li>
+            <li>Community:  Large</li>
+        </ul>
+
+        """
+    def print_dis(self):
+        display = self.display
+        return display
+
+class Wii(object):
+    def __init__(self):
+        self.display = """
+        <ul>
+            <li>User Rating:  7.2/10</li>
+            <li>Price:  $299.99</li>
+            <li>Community:  Medium</li>
+        </ul>
+
+        """
+    def print_dis(self):
+        display = self.display
+        return display
+
+class Xbox360(object):
+    def __init__(self):
+        self.display = """
+        <ul>
+            <li>User Rating:  9.3/10</li>
+            <li>Price:  $199.99</li>
+            <li>Community:  Large</li>
+        </ul>
+
+        """
+    def print_dis(self):
+        display = self.display
+        return display
+
+class PS3(object):
+    def __init__(self):
+        self.display = """
+        <ul>
+            <li>User Rating:  9.5/10</li>
+            <li>Price:  $399.99</li>
+            <li>Community:  Medium</li>
+        </ul>
+
+        """
+    def print_dis(self):
+        display = self.display
+        return display
+
