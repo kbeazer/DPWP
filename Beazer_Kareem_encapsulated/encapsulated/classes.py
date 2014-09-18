@@ -22,14 +22,19 @@ class HomePage(object):
             <ul>
                 <li>XBox 1</li>
                 {self.xbox1}
+                <input type="submit" value="Select" />
                 <li>PS4</li>
                 {self.ps4}
+                <input type="submit" value="Select" />
                 <li>Wii U</li>
                 {self.wii}
+                <input type="submit" value="Select" />
                 <li>XBox 360</li>
                 {self.x360}
+                <input type="submit" value="Select" />
                 <li>PS3</li>
                 {self.ps3}
+                <input type="submit" value="Select" />
             </ul>
         </nav>
 
