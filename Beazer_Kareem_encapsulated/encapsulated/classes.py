@@ -22,19 +22,15 @@ class HomePage(object):
             <ul>
                 <li>XBox 1</li>
                 {self.xbox1}
-                <input type="submit" value="Select" />
                 <li>PS4</li>
                 {self.ps4}
-                <input type="submit" value="Select" />
                 <li>Wii U</li>
                 {self.wii}
-                <input type="submit" value="Select" />
                 <li>XBox 360</li>
                 {self.x360}
-                <input type="submit" value="Select" />
                 <li>PS3</li>
                 {self.ps3}
-                <input type="submit" value="Select" />
+
             </ul>
         </nav>
 
@@ -60,16 +56,23 @@ class HomePage(object):
 
 class Xbox1(object):
     def __init__(self):
+        success = Success()
+        self.view = "Xbox 1"
         self.display = """
         <ul>
             <li>User Rating:  9.5/10</li>
             <li>Price:  $399.99</li>
             <li>Community:  Large</li>
         </ul>
-
         """
+        self.button = """
+        <form method="GET">
+            <input type="submit" value="Select" button() />
+        </form>
+        """
+
     def print_dis(self):
-        display = self.display
+        display = self.display + self.button
         return display
 
 class PS4(object):
@@ -80,10 +83,14 @@ class PS4(object):
             <li>Price:  $499.99</li>
             <li>Community:  Large</li>
         </ul>
-
+        """
+        self.button = """
+        <form method="GET">
+            <input type="submit" value="Select" />
+        </form>
         """
     def print_dis(self):
-        display = self.display
+        display = self.display + self.button
         return display
 
 class Wii(object):
@@ -94,8 +101,12 @@ class Wii(object):
             <li>Price:  $299.99</li>
             <li>Community:  Medium</li>
         </ul>
+        <form method="GET">
+            <input type="submit" value="Select" />
+        </form>
 
         """
+
     def print_dis(self):
         display = self.display
         return display
@@ -108,6 +119,9 @@ class Xbox360(object):
             <li>Price:  $199.99</li>
             <li>Community:  Large</li>
         </ul>
+        <form method="GET">
+            <input type="submit" value="Select" />
+        </form>
 
         """
     def print_dis(self):
@@ -122,9 +136,42 @@ class PS3(object):
             <li>Price:  $399.99</li>
             <li>Community:  Medium</li>
         </ul>
+        <form method="GET">
+            <input type="submit" value="Select" />
+        </form>
 
         """
     def print_dis(self):
         display = self.display
         return display
 
+class Success(object):
+    def __init__(self):
+        self.title = "Gamers World"  # sets the title attribute for the page.
+        self.css = "css/style.css"  # sets the location of the css file.
+        self.head =  """
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{self.title}</title>
+        <link href="{self.css}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        """
+
+        self.body = """
+        <div>
+            <h1>Your Selection</h1>
+            <p>You have selected the :</p>
+        </div>
+
+        """
+        self.close = """
+    </body>
+</html>
+        """
+
+    def print_out(self):
+        all = self.head + self.body + self.close
+        all = all.format(**locals())
+        return all
