@@ -26,7 +26,13 @@ nav ul li{
     background: #36a7b7;
     color: #fffeff;
     padding: 10px;
+    font-size: 20px;
 }
-input{
+p{
+    background: #fffeff;
+    margin: 0;
+    padding: 10px;
+}
+input[name="placeholder"]{
     padding-left: 20px;
 }
