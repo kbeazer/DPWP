@@ -19,7 +19,7 @@ class MainHandler(webapp2.RequestHandler):
 
         if self.request.GET:  # stores the information received from the form
             view = self.request.GET['platform']  # assign the view to a variable
-            self.response.write(success + view + " at a discounted rate of " )
+            self.response.write(success + view)
         else:
             pass
 

@@ -57,7 +57,6 @@ class HomePage(object):
 
 class Xbox1(object):
     def __init__(self):
-        self.price = 319.99
         self.display = """
         <ul>
             <li>User Rating:  9.5/10</li>
