@@ -3,7 +3,7 @@ class HomePage(object):
         self.error = "Please select an option to continue."
         self.title = "Gamers World"  # sets the title attribute for the page.
         self.css = "css/style.css"  # sets the location of the css file.
-        self.head =  """
+        self.head = """
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -16,20 +16,20 @@ class HomePage(object):
         self.body = """
         <div>
             <h1>Compare and Select</h1>
-            <p>Find a product that best suits your financial needs.</p>
+            <p>Please select a product from the list below.</p>
         </div>
 
         <nav>
             <ul>
-                <li>XBox 1</li>
+                <li class="heading">XBox 1</li>
                 {self.xbox1}
-                <li>PS4</li>
+                <li class="heading">PS4</li>
                 {self.ps4}
-                <li>Wii U</li>
+                <li class="heading">Wii U</li>
                 {self.wii}
-                <li>XBox 360</li>
+                <li class="heading">XBox 360</li>
                 {self.x360}
-                <li>PS3</li>
+                <li class="heading">PS3</li>
                 {self.ps3}
 
             </ul>
@@ -44,14 +44,14 @@ class HomePage(object):
 </html>
         """
 
-        self.xbox1 = Xbox1().print_dis()
-        self.ps4 = PS4().print_dis()
-        self.wii = Wii().print_dis()
-        self.x360 = Xbox360().print_dis()
-        self.ps3 = PS3().print_dis()
+        self.xbox1 = Xbox1().print_dis()  # add xbox1 print function to class.
+        self.ps4 = PS4().print_dis()  # add ps4 print function to class.
+        self.wii = Wii().print_dis()  # add wii print function to class.
+        self.x360 = Xbox360().print_dis()  # add xbox 360 print function to class.
+        self.ps3 = PS3().print_dis()  # add ps3 print function to class.
 
     def print_out(self):
-        all = self.head + self.body + self.close
+        all = self.head + self.body + self.close  # stores information into all variable
         all = all.format(**locals())
         return all
 
@@ -120,7 +120,7 @@ class Xbox360(object):
             <li>Community:  Large</li>
         </ul>
         <form method="GET">
-            <input type="submit" value="Select" />
+            <input type="submit" value="XBox 360" name="platform" />
         </form>
 
         """
@@ -133,11 +133,11 @@ class PS3(object):
         self.display = """
         <ul>
             <li>User Rating:  9.5/10</li>
-            <li>Price:  $399.99</li>
+            <li>Price:  $149.99</li>
             <li>Community:  Medium</li>
         </ul>
         <form method="GET">
-            <input type="submit" value="Select" />
+            <input type="submit" value="PS3" name="platform" />
         </form>
 
         """

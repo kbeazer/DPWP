@@ -18,20 +18,17 @@ from classes import Success
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         h = HomePage()
-        x1 = Xbox1()
-        ps4 = PS4()
         success = Success().print_out()
         self.response.write(h.print_out())
 
 
         if self.request.GET:
             #stores the information received from the form
-            #name = self.request.GET['name']
-            view = self.request.GET['platform']
             os.system('clear')
+            view = self.request.GET['platform']
             self.response.write(success + view)
         else:
-            self.response.write(self.error) #prints out the information on the screen
+            pass
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

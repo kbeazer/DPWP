@@ -1,0 +1,29 @@
+body{
+    width: 50%;
+    background: #dedede;
+    margin: 0 auto;
+}
+h1{
+    color: #c2150f;
+    background: #fffeff;
+    text-align: center;
+    padding: 10px;
+}
+nav{
+    background: #fffeff;
+
+}
+nav ul{
+    display: inline;
+}
+nav ul li{
+
+    list-style: none;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+.heading{
+    background: #36a7b7;
+    color: #fffeff;
+    padding: 10px;
+}
