@@ -50,14 +50,13 @@ class HomePage(object):
         self.x360 = Xbox360().print_dis()  # add xbox 360 print function to class.
         self.ps3 = PS3().print_dis()  # add ps3 print function to class.
 
-    def print_out(self):
-        all = self.head + self.body + self.close  # stores information into all variable
+    def print_out(self):  # sets print function
+        all = self.head + self.body + self.close  # stores information into the all variable
         all = all.format(**locals())
         return all
 
 class Xbox1(object):
     def __init__(self):
-        self.view = "Xbox 1"
         self.display = """
         <ul>
             <li>User Rating:  9.5/10</li>
@@ -71,7 +70,7 @@ class Xbox1(object):
         </form>
         """
 
-    def print_dis(self):
+    def print_dis(self):  # sets print function
         display = self.display + self.button
         return display
 
@@ -89,7 +88,7 @@ class PS4(object):
             <input type="submit" value="PS4" name="platform" />
         </form>
         """
-    def print_dis(self):
+    def print_dis(self):  # sets print function
         display = self.display + self.button
         return display
 
@@ -107,7 +106,7 @@ class Wii(object):
 
         """
 
-    def print_dis(self):
+    def print_dis(self):  # sets print function
         display = self.display
         return display
 
@@ -124,7 +123,7 @@ class Xbox360(object):
         </form>
 
         """
-    def print_dis(self):
+    def print_dis(self):  # sets print function
         display = self.display
         return display
 
@@ -141,7 +140,7 @@ class PS3(object):
         </form>
 
         """
-    def print_dis(self):
+    def print_dis(self):  # sets print function
         display = self.display
         return display
 
@@ -171,7 +170,7 @@ class Success(object):
 </html>
         """
 
-    def print_out(self):
+    def print_out(self):  # sets print function
         all = self.head + self.body + self.close
         all = all.format(**locals())
         return all
