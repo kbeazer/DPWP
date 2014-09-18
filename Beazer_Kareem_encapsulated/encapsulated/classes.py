@@ -55,6 +55,7 @@ class HomePage(object):
         all = all.format(**locals())
         return all
 
+
 class Xbox1(object):
     def __init__(self):
         self.display = """
@@ -74,6 +75,7 @@ class Xbox1(object):
         display = self.display + self.button
         return display
 
+
 class PS4(object):
     def __init__(self):
         self.display = """
@@ -88,9 +90,11 @@ class PS4(object):
             <input type="submit" value="PS4" name="platform" />
         </form>
         """
+
     def print_dis(self):  # sets print function
         display = self.display + self.button
         return display
+
 
 class Wii(object):
     def __init__(self):
@@ -110,6 +114,7 @@ class Wii(object):
         display = self.display
         return display
 
+
 class Xbox360(object):
     def __init__(self):
         self.display = """
@@ -123,9 +128,11 @@ class Xbox360(object):
         </form>
 
         """
+
     def print_dis(self):  # sets print function
         display = self.display
         return display
+
 
 class PS3(object):
     def __init__(self):
@@ -140,15 +147,17 @@ class PS3(object):
         </form>
 
         """
+
     def print_dis(self):  # sets print function
         display = self.display
         return display
+
 
 class Success(object):
     def __init__(self):
         self.title = "Gamers World"  # sets the title attribute for the page.
         self.css = "css/style.css"  # sets the location of the css file.
-        self.head =  """
+        self.head = """
 <!DOCTYPE HTML>
 <html>
     <head>
