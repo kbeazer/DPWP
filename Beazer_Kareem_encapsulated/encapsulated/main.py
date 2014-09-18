@@ -16,11 +16,14 @@
 #
 import webapp2
 from classes import HomePage
+from classes import Xbox1
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         h = HomePage()
+        x = Xbox1()
         self.response.write(h.print_out())
+        self.response.write(x.print_dis())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
