@@ -17,14 +17,20 @@
 import webapp2
 from gStop import GameGrab
 
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         g = GameGrab()
         self.response.write(g.print_page())
 
         if self.request.GET:
-            g.input = self.request.GET['placeholder']
-            self.response.write
+            query = self.request.GET['user']
+            self.response.write('You just searched for: ' + query)
+        else:
+            pass
+
+
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
