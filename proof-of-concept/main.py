@@ -22,6 +22,9 @@ class MainHandler(webapp2.RequestHandler):
         g = GameGrab()
         self.response.write(g.print_page())
 
+        if self.request.GET:
+            g.input = self.request.GET['placeholder']
+            self.response.write
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
