@@ -35,9 +35,6 @@ class HomePage(object):
             </ul>
         </nav>
 
-        <div></div>
-        <div></div>
-
         """
         self.close = """
     </body>
