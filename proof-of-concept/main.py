@@ -16,11 +16,13 @@
 #
 import webapp2
 from gStop import GameGrab
+from gStop import ResultsView
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         g = GameGrab()
+        r = ResultsView()
         self.response.write(g.print_page())
 
         if self.request.GET:
