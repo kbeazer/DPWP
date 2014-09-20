@@ -12,7 +12,7 @@ class GameGrab(object):
             <body>
                 <h1>The Video Game Grabber</h1>
                 <h2>The one stop center for all your gaming needs.</h2>
-                <form method="GET" action="http://gamestop.com">
+                <form method="GET" action="http://www.gamestop.com/Search.axd?">
                     <input type="text" placeholder="enter your search here" />
                     <input type="submit" value="Search" />
                 </form>

@@ -15,12 +15,12 @@
 # limitations under the License.
 #
 import webapp2
-from g-stop import GameGrab
+from gStop import GameGrab
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         g = GameGrab()
-        self.response.write(g.print_page)
+        self.response.write(g.print_page())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
