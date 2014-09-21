@@ -8,12 +8,14 @@ POC
 import webapp2
 from gStop import GameGrab
 from gStop import ResultsView
+from gStop import Redirect
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         g = GameGrab()
         r = ResultsView()
+        direct = Redirect()
         self.response.write(g.print_page())
         results = self.request.get('results')
         view = self.request.get('user')
@@ -26,7 +28,7 @@ class MainHandler(webapp2.RequestHandler):
 
         if results:
             self.response.clear()
-            self.response.write('I work!!!!')
+            self.redirect(direct.new_page(view))
         else:
             pass
 

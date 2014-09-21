@@ -57,3 +57,10 @@ class ResultsView(object):
         page = self.head + self.body + self.close
         page = page.format(**locals())
         return page
+
+
+class Redirect(object):
+    def new_page(self, search):
+        action = "https://www.google.com/webhp?gws_rd=ssl#q="
+        add = action + search
+        return add
