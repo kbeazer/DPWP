@@ -43,11 +43,8 @@ class ResultsView(object):
     <body>
         """
         self.body = """
-        <h1>The Video Game Grabber</h1>
-        <h2>The one stop center for all your gaming needs.</h2>
-        <form method="GET">
-            <input type="text" name="user" />
-            <input type="submit" value="Search" name="entry" />
+       <form method="GET">
+            <input type="submit" value="View the Results" name="results" />
         </form>
         """
         self.close = """
