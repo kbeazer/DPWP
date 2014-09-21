@@ -28,10 +28,7 @@ class MainHandler(webapp2.RequestHandler):
 
         if results:
             self.response.clear()
-            action = "https://www.google.com/webhp?gws_rd=ssl#q=" + view
-            #self.redirect(action)
-            self.response.write(view)
-            #self.redirect(direct.new_page())
+            self.redirect(direct.new_page() + view)
         else:
             pass
 

@@ -12,4 +12,14 @@ h1{
 }
 h2{
   color: #cfcfcd;
+  padding-left: 20px;
+}
+input[name="user"]{
+    height: 20px;
+    width: 400px;
+    margin: 0 0 20px 20px;
+    padding-left: 20px;
+}
+.container{
+    background-color: #47b049;
 }
