@@ -25,6 +25,7 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(r.print_page())
 
         if results:
+            self.response.clear()
             self.response.write('I work!!!!')
         else:
             pass
