@@ -1,7 +1,7 @@
-class GameGrab(object):
+class GameGrab(object): # GameGrab object start
     def __init__(self):
-        self.title = "Game Grabber"
-        self.css = "css/style.css"
+        self.title = "Game Grabber"  # sets the title of the page
+        self.css = "css/style.css"  # sets the path of the css directory
         self.head = """
 <!DOCTYPE HTML>
 <html>
@@ -26,7 +26,7 @@ class GameGrab(object):
 </html>
         """
 
-    def print_page(self):
+    def print_page(self): # print page attribute enabled
         page = self.head + self.body + self.close
         page = page.format(**locals())
         return page
@@ -63,5 +63,5 @@ class ResultsView(object):
 
 class Redirect(object):
     def new_page(self):
-        action = "https://www.google.com/webhp?gws_rd=ssl#q="
+        action = "https://www.google.com/webhp?gws_rd=ssl#q="  # starting link for the search engine
         return action
