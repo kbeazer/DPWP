@@ -6,12 +6,12 @@ body{
 h1{
     text-align: center;
     font-family: arial, sans-serif;
-    color: #cfcfcd;
+    color: #282828;
     padding: 40px;
     background-color: #5f86a5;
 }
 h2{
-  color: #cfcfcd;
+  color: #282828;
   padding-left: 20px;
 }
 input[name="user"]{
@@ -22,4 +22,9 @@ input[name="user"]{
 }
 .container{
     background-color: #47b049;
+}
+p{
+    background-color: #47b049;
+    margin-top: -10px;
+    padding: 10px;
 }

@@ -21,7 +21,7 @@ class MainHandler(webapp2.RequestHandler):
         view = self.request.get('user')
 
         if view == "":
-            self.response.write('Please enter a search query to continue.')
+            self.response.write('<p>Please enter a search query to continue.</p>')
         elif view:
             self.response.write('You just searched for: ' + view)
             self.response.write(r.print_page())
