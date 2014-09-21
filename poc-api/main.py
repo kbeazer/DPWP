@@ -22,13 +22,16 @@ class MainHandler(webapp2.RequestHandler):
 
         if view == "":
             self.response.write('Please enter a search query to continue.')
-        else:
+        elif view:
             self.response.write('You just searched for: ' + view)
             self.response.write(r.print_page())
 
         if results:
             self.response.clear()
-            self.redirect(direct.new_page(view))
+            action = "https://www.google.com/webhp?gws_rd=ssl#q=" + view
+            #self.redirect(action)
+            self.response.write(view)
+            #self.redirect(direct.new_page())
         else:
             pass
 

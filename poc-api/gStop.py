@@ -60,7 +60,6 @@ class ResultsView(object):
 
 
 class Redirect(object):
-    def new_page(self, search):
+    def new_page(self):
         action = "https://www.google.com/webhp?gws_rd=ssl#q="
-        add = action + search
-        return add
+        return action
