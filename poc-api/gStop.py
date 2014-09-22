@@ -46,7 +46,7 @@ class ResultsView(object):
     <body>
         """
         self.body = """
-       <form method="GET">
+        <form method="GET">
             <input type="submit" value="View the Results" name="results" />
         </form>
         """
