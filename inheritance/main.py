@@ -4,7 +4,6 @@ Kareem K. Beazer
 Design Patterns for Web Programming - Online
 Application with API
 """
-
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
