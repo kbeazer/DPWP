@@ -34,6 +34,7 @@ class MainHandler(webapp2.RequestHandler):
             condition = jsondoc['weather'][0]['description']
             self.response.write("City Chosen: " + name + '<br />' "Weather at your location: " + condition)
 
+
 class Page(object):
     def __init__(self):
         self._head = """

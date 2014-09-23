@@ -8,17 +8,27 @@ Application with API
 import webapp2
 import json
 import urllib2
-from model import WikiModel
-from view import WikiView
+from model import WunderModel
+from view import WunderView
 
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         f = FormPage()
-        f.inputs = [['search', 'text', 'search'], ['Submit', 'submit']]
-        self.response.write(f.print_out())
+        f.inputs = [['zip', 'text', 'zip'], ['Submit', 'submit']]
 
+        if self.request.GET:  # only if there is a zip variable in the url
+
+            m = WunderModel()  # creates the Model
+            m.search = self.request.GET['zip']  # sends the zipcode from the url to the model
+            m.call_api()  # connect to the API
+
+            v = WunderView() # creates the user View
+            #v.sobject = m._mobjects  # takes the data objects from the Model class and sends them to the View
+            f._body = v.content
+
+        self.response.write(f.print_out())
 
 class Page(object):
     def __init__(self):

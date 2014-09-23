@@ -1,22 +1,54 @@
-class WikiModel(object):
+import urllib2
+import json
+
+
+class WunderModel(object):
     """ this Model is in charge of requesting, parsing, and sending data from the Wiki API """
     def __init__(self):
-        self.__sUrl = "http://en.wikipedia.org/w/api.php?format=json&action=query"
-        self.__eUrl = "&prop=revisions&rvprop=content"
-        self.__search = ''  # needs & before variable and %20 between any spaces
+        self.__url = 'http://api.wunderground.com/api/4368eaeb87521ad2/forecast/geolookup/conditions/q/'
+        self.__search = ''
 
     def call_api(self):
-
         # assemble the request
-        request = urllib2.Request(self.__sUrl + '&' + self.__search + self.__eUrl)
+        request = urllib2.Request(self.__url + self.__search + '.json')
         # use the urllib2 to create an object to get the url
         opener = urllib2.build_opener()
         # use the url to get a result - request info from the API
         result = opener.open(request)
-
         # parsing the json
         jsondoc = json.load(result)
+        self._mobjects = []
 
-        name = jsondoc
+        updated = jsondoc['current_observation']['observation_time']
+        name = jsondoc['current_observation']['display_location']['full']
+        condition = jsondoc['current_observation']['weather']
+        temperature = jsondoc['current_observation']['temp_f']
+        forecast = jsondoc['current_observation']['nowcast']
+        print name
+        print condition
+        print updated
+        print temperature
+        print forecast
 
-        self.response.write(name)
+    @property
+    def name(self):
+        return self.name
+
+    @property
+    def search(self):
+        pass
+
+    @search.setter
+    def search(self, s):
+        self.__search = s
+
+
+class WunderData(object):
+    """ this data object holds the data fetched by the model and shown by the view """
+    def __init__(self):
+        self.day = ''
+        self.high = ''
+        self.low = ''
+        self.code = ''
+        self.condition = ''
+        self.date = ''
