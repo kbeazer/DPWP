@@ -6,9 +6,7 @@ class WikiModel(object):
         self.__search = ''  # needs & before variable and %20 between any spaces
 
     def call_api(self):
-        # get the info from the API
-        search = self.request.get('search')
-        
+
         # assemble the request
         request = urllib2.Request(self.__sUrl + '&' + self.__search + self.__eUrl)
         # use the urllib2 to create an object to get the url

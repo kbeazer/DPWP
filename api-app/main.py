@@ -8,6 +8,9 @@ Application with API
 import webapp2
 import json
 import urllib2
+from model import WikiModel
+from view import WikiView
+
 
 
 class MainHandler(webapp2.RequestHandler):
