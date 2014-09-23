@@ -27,6 +27,13 @@ class WunderModel(object):
         data.forecast = jsondoc['current_observation']['nowcast']
         data.current = jsondoc['forecast']['txt_forecast']['forecastday'][0]['title']
         data.curmess = jsondoc['forecast']['txt_forecast']['forecastday'][0]['fcttext']
+        data.day1 = jsondoc['forecast']['txt_forecast']['forecastday'][2]['title']
+        data.d1mess = jsondoc['forecast']['txt_forecast']['forecastday'][2]['fcttext']
+        data.day2 = jsondoc['forecast']['txt_forecast']['forecastday'][4]['title']
+        data.d2mess = jsondoc['forecast']['txt_forecast']['forecastday'][4]['fcttext']
+        data.day3 = jsondoc['forecast']['txt_forecast']['forecastday'][6]['title']
+        data.d3mess = jsondoc['forecast']['txt_forecast']['forecastday'][6]['fcttext']
+
         self._mobjects.append(data)
 
         """
