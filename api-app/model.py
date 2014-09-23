@@ -39,7 +39,7 @@ class WunderModel(object):
         data.d3img = jsondoc['forecast']['txt_forecast']['forecastday'][6]['icon']
         self._mobjects.append(data)
 
-    
+
 
     @property
     def name(self):
@@ -64,9 +64,13 @@ class WunderData(object):
         self.forecast = ''
         self.current = ''
         self.curmess = ''
+        self.curimg = ''
         self.day1 = ''
         self.d1mess = ''
+        self.d1img = ''
         self.day2 = ''
         self.d2mess = ''
+        self.d2img = ''
         self.day3 = ''
         self.d3mess = ''
+        self.d3img = ''
