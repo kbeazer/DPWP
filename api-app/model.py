@@ -4,3 +4,5 @@ class WikiModel(object):
         self.__sUrl = "http://en.wikipedia.org/w/api.php?format=json&action=query"
         self.__eUrl = "&prop=revisions&rvprop=content"
         self.__titles = ''  # needs & before variable and %20 between any spaces
+
+
