@@ -16,13 +16,13 @@ class WunderView(object):
             self.__content += obj.curmess + "<br />"
 
             if obj.curimg == "sunny":
-                self.__content += '<img src="images/sunny.png />'
+                self.__content += '<img src="images/sunny.png" />'
             elif obj.curimg == "cloudy":
-                self.__content += '<img src="images/cloudy.png />'
+                self.__content += '<img src="images/cloudy.png" />'
             elif obj.curimg == "chancetstorms":
-                self.__content += '<img src="images/chancetstorms.png />'
+                self.__content += '<img src="images/chancetstorms.png" />'
             elif obj.curimg == "tstorms":
-                self.__content += '<img src="images/tstorms.png />'
+                self.__content += '<img src="images/tstorms.png" />'
             else:
                 pass
 
@@ -30,13 +30,13 @@ class WunderView(object):
             self.__content += obj.d1mess + "<br />"
 
             if obj.d1img == "sunny":
-                self.__content += '<img src="images/sunny.png />'
+                self.__content += '<img src="images/sunny.png" />'
             elif obj.d1img == "cloudy":
-                self.__content += '<img src="images/cloudy.png />'
+                self.__content += '<img src="images/cloudy.png" />'
             elif obj.d1img == "chancetstorms":
-                self.__content += '<img src="images/chancetstorms.png />'
+                self.__content += '<img src="images/chancetstorms.png" />'
             elif obj.d1img == "tstorms":
-                self.__content += '<img src="images/tstorms.png />'
+                self.__content += '<img src="images/tstorms.png" />'
             else:
                 pass
 
@@ -58,13 +58,13 @@ class WunderView(object):
             self.__content += obj.d3mess + "<br />"
 
             if obj.d3img == "sunny":
-                self.__content += '<img src="images/sunny.png />'
+                self.__content += '<img src="images/sunny.png" />'
             elif obj.d3img == "cloudy":
-                self.__content += '<img src="images/cloudy.png />'
+                self.__content += '<img src="images/cloudy.png" />'
             elif obj.d3img == "chancetstorms":
-                self.__content += '<img src="images/chancetstorms.png />'
+                self.__content += '<img src="images/chancetstorms.png" />'
             elif obj.d3img == "tstorms":
-                self.__content += '<img src="images/tstorms.png />'
+                self.__content += '<img src="images/tstorms.png" />'
             else:
                 pass
 
