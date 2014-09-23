@@ -9,7 +9,15 @@ class WunderView(object):
             self.__content += obj.updated + "    LOCATION: " + obj.name + "    CONDITIONS: " + obj.condition
             self.__content += "   TEMPERATURE: " + obj.temperature
             self.__content += "   FORECAST: " + obj.forecast
-            self.__content += "   DAY: " + obj.current + obj.curmess
+            self.__content += "  4-DAY FORECAST: " + "<br />"
+            self.__content += obj.current + "<br />"
+            self.__content += obj.curmess + "<br />"
+            self.__content += obj.day1 + "<br />"
+            self.__content += obj.d1mess + "<br />"
+            self.__content += obj.day2 + "<br />"
+            self.__content += obj.d2mess + "<br />"
+            self.__content += obj.day3 + "<br />"
+            self.__content += obj.d3mess + "<br />"
 
     @property
     def content(self):
