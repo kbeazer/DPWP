@@ -17,18 +17,24 @@ class WunderModel(object):
         result = opener.open(request)
         # parsing the json
         jsondoc = json.load(result)
-        self._mobjects = []
 
-        updated = jsondoc['current_observation']['observation_time']
-        name = jsondoc['current_observation']['display_location']['full']
-        condition = jsondoc['current_observation']['weather']
-        temperature = jsondoc['current_observation']['temp_f']
-        forecast = jsondoc['current_observation']['nowcast']
-        print name
-        print condition
-        print updated
-        print temperature
-        print forecast
+        if self.search:
+            self._mobjects = []
+            data = WunderData()
+            data.updated = jsondoc['current_observation']['observation_time']
+            data.name = jsondoc['current_observation']['display_location']['full']
+            data.condition = jsondoc['current_observation']['weather']
+            data.temperature = jsondoc['current_observation']['temp_f']
+            data.forecast = jsondoc['current_observation']['nowcast']
+            self._mobjects.append(data)
+
+            """
+            print name
+            print condition
+            print updated
+            print temperature
+            print forecast
+            """
 
     @property
     def name(self):
@@ -46,9 +52,8 @@ class WunderModel(object):
 class WunderData(object):
     """ this data object holds the data fetched by the model and shown by the view """
     def __init__(self):
-        self.day = ''
-        self.high = ''
-        self.low = ''
-        self.code = ''
+        self.updated = ''
+        self.name = ''
         self.condition = ''
-        self.date = ''
+        self.temperature = ''
+        self.forecast = ''
