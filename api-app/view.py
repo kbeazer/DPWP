@@ -6,9 +6,11 @@ class WunderView(object):
 
     def update(self):
         for obj in self.__sobject:
-            self.__content += obj.updated + "    LOCATION: " + obj.name + "    CONDITIONS: " + obj.condition
-            self.__content += "   TEMPERATURE: " + obj.temperature
-            self.__content += "   FORECAST: " + obj.forecast
+            self.__content += obj.updated + "<br />"
+            self.__content += "    LOCATION: " + obj.name + "<br />"
+            self.__content += "    CONDITIONS: " + obj.condition
+            self.__content += "   TEMPERATURE: " + obj.temperature + "<br />"
+            self.__content += "   FORECAST: " + obj.forecast + "<br />"
             self.__content += "  4-DAY FORECAST: " + "<br />"
             self.__content += obj.current + "<br />"
             self.__content += obj.curmess + "<br />"
