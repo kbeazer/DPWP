@@ -16,24 +16,6 @@ class MainHandler(webapp2.RequestHandler):
         f.inputs = [['search', 'text', 'search'], ['Submit', 'submit']]
         self.response.write(f.print_out())
 
-        if self.request.GET:  # only if there is a search variable in the url
-            # get the info from the API
-            search = self.request.GET['search']
-            url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + ',' + country
-            # assemble the request
-            request = urllib2.Request(url)
-            # use the urllib2 to create an object to get the url
-            opener = urllib2.build_opener()
-            # use the url to get a result - request info from the API
-            result = opener.open(request)
-
-            # parsing the json
-            jsondoc = json.load(result)
-
-            name = jsondoc['name']
-            condition = jsondoc['weather'][0]['description']
-            self.response.write("City Chosen: " + name + '<br />' "Weather at your location: " + condition)
-
 
 class Page(object):
     def __init__(self):
