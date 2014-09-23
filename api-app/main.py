@@ -6,6 +6,8 @@ Application with API
 """
 
 import webapp2
+import json
+import urllib2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):

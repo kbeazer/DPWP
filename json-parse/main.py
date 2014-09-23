@@ -2,17 +2,37 @@
 Kareem K. Beazer
 9/20/14
 Design Patterns for Web Programming - Online
-Inheritance
+JSon Parse Weather App
 """
 import webapp2
+import urllib2
+import json
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = FormPage()
-        p.inputs = [['first_name', 'text', 'First Name'], ['last_name', 'text', 'Last Name'], ['Submit', 'submit']]
-        self.response.write(p.print_out_form())
+        p.inputs = [['city', 'text', 'city'], ['country', 'text', 'country'], ['Submit', 'submit']]
+        self.response.write(p.print_out())
 
+        if self.request.GET:  # only if there is a zip variable in the url
+            # get the info from the API
+            city = self.request.GET['city']
+            country = self.request.GET['country']
+            url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + ',' + country
+            # assemble the request
+            request = urllib2.Request(url)
+            # use the urllib2 to create an object to get the url
+            opener = urllib2.build_opener()
+            # use the url to get a result - request info from the API
+            result = opener.open(request)
+
+            # parsing the json
+            jsondoc = json.load(result)
+
+            name = jsondoc['name']
+            condition = jsondoc['weather'][0]['description']
+            self.response.write("City Chosen: " + name + '<br />' "Weather at your location: " + condition)
 
 class Page(object):
     def __init__(self):
@@ -24,7 +44,7 @@ class Page(object):
     </head>
     <body>
         """
-        self._body = "Filler"
+        self._body = "Weather App"
         self._close = """
     </body>
 </html>
@@ -61,7 +81,8 @@ class FormPage(Page):
 
         print self._form_inputs
 
-    def print_out_form(self):
+    # Polymorphism Alert--------method overriding
+    def print_out(self):
         return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
 
 
