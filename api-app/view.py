@@ -11,7 +11,7 @@ class WunderView(object):
             self.__content += "    CONDITIONS: " + obj.condition
             self.__content += "   TEMPERATURE: " + obj.temperature + "<br />"
             self.__content += "   FORECAST: " + obj.forecast + "<br />"
-            self.__content += "  4-DAY FORECAST: " + "<br />"
+            self.__content += "  4-DAY FORECAST" + "<br />"
             self.__content += obj.current + "<br />"
             self.__content += obj.curmess + "<br />"
             self.__content += obj.day1 + "<br />"
@@ -33,3 +33,6 @@ class WunderView(object):
     def sobject(self, arr):
         self.__sobject = arr
         self.update()
+
+
+class ImageInput(object):

@@ -12,10 +12,9 @@ from model import WunderModel
 from view import WunderView
 
 
-
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        f = FormPage()
+        f = UserForm()
         f.inputs = [['zip', 'text', 'enter a zipcode'], ['Submit', 'submit']]
 
         if self.request.GET:  # only if there is a zip variable in the url
@@ -24,13 +23,14 @@ class MainHandler(webapp2.RequestHandler):
             m.search = self.request.GET['zip']  # sends the zipcode from the url to the model
             m.call_api()  # connect to the API
 
-            v = WunderView() # creates the user View
+            v = WunderView()  # creates the user View
             v.sobject = m._mobjects  # takes the data objects from the Model class and sends them to the View
             f._body = v.content
 
         self.response.write(f.print_out())
 
-class Page(object):
+
+class Page(object):  # THIS PAGE CLASS IS AN EXAMPLE OF AN ABSTRACT CLASS.  IT IS BEING USED AS A TEMPLATE.
     def __init__(self):
         self._head = """
 <!DOCTYPE HTML>
@@ -50,9 +50,9 @@ class Page(object):
         return self._head + self._body + self._close
 
 
-class FormPage(Page):
+class UserForm(Page):  # THIS USER FORM CLASS INHERITS THE ATTRIBUTES OF THE PAGE CLASS.
     def __init__(self):
-        super(FormPage, self).__init__()  # Page.__init__()
+        super(UserForm, self).__init__()  # Page.__init__()
         self._form_open = '<form method="GET">'
         self._form_close = '</form>'
         self.__inputs = []  # inputs variable is made private by adding the prefix __
@@ -71,14 +71,14 @@ class FormPage(Page):
             self._form_inputs += '<input type="' + i[1] + '" name="' + i[0]
             # if there is a third item in array..add it to the array
             try:
-                self._form_inputs += '" placeholder="' + i[2] + '" />'
+                self._form_inputs += '" placeholder="' + i[2] + '" required />'
             # else...end the closing tag
             except:
-                self._form_inputs += '" />'
+                self._form_inputs += '" required />'
 
         print self._form_inputs
 
-    # Polymorphism Alert--------method overriding
+    # THIS PRINTOUT USES POLYMORPHIS BY OVERRIDING THE PRINT FEATURE OF ITS PARENT CLASS (PAGE).
     def print_out(self):
         return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
 
