@@ -5,10 +5,11 @@ class WunderView(object):
         self.__content = '<br />'
 
     def update(self):
-        for do in self.__sobject:
-            self.__content += do.day + "    HIGH: " + do.high + "    LOW: " + do.low
-            self.__content += "   CONDITION: " + do.condition
-            self.__content += '<img src="images/' + do.code + '.png" width="20" /><br />'
+        for obj in self.__sobject:
+            self.__content += obj.updated + "    LOCATION: " + obj.name + "    CONDITIONS: " + obj.condition
+            self.__content += "   TEMPERATURE: " + obj.temperature
+            self.__content += "   FORECAST: " + obj.forecast
+            self.__content += "   DAY: " + obj.current + obj.curmess
 
     @property
     def content(self):

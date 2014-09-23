@@ -16,7 +16,7 @@ from view import WunderView
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         f = FormPage()
-        f.inputs = [['zip', 'text', 'zip'], ['Submit', 'submit']]
+        f.inputs = [['zip', 'text', 'enter a zipcode'], ['Submit', 'submit']]
 
         if self.request.GET:  # only if there is a zip variable in the url
 
@@ -25,7 +25,7 @@ class MainHandler(webapp2.RequestHandler):
             m.call_api()  # connect to the API
 
             v = WunderView() # creates the user View
-            #v.sobject = m._mobjects  # takes the data objects from the Model class and sends them to the View
+            v.sobject = m._mobjects  # takes the data objects from the Model class and sends them to the View
             f._body = v.content
 
         self.response.write(f.print_out())
@@ -40,7 +40,7 @@ class Page(object):
     </head>
     <body>
         """
-        self._body = "Search It Wiki Style"
+        self._body = "Find out current weather conditions in your city."
         self._close = """
     </body>
 </html>

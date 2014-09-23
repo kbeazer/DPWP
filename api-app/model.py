@@ -7,6 +7,7 @@ class WunderModel(object):
     def __init__(self):
         self.__url = 'http://api.wunderground.com/api/4368eaeb87521ad2/forecast/geolookup/conditions/q/'
         self.__search = ''
+        self._mobjects = []
 
     def call_api(self):
         # assemble the request
@@ -18,23 +19,23 @@ class WunderModel(object):
         # parsing the json
         jsondoc = json.load(result)
 
-        if self.search:
-            self._mobjects = []
-            data = WunderData()
-            data.updated = jsondoc['current_observation']['observation_time']
-            data.name = jsondoc['current_observation']['display_location']['full']
-            data.condition = jsondoc['current_observation']['weather']
-            data.temperature = jsondoc['current_observation']['temp_f']
-            data.forecast = jsondoc['current_observation']['nowcast']
-            self._mobjects.append(data)
+        data = WunderData()
+        data.updated = jsondoc['current_observation']['observation_time']
+        data.name = jsondoc['current_observation']['display_location']['full']
+        data.condition = jsondoc['current_observation']['weather']
+        data.temperature = jsondoc['current_observation']['temperature_string']
+        data.forecast = jsondoc['current_observation']['nowcast']
+        data.current = jsondoc['forecast']['txt_forecast']['forecastday'][0]['title']
+        data.curmess = jsondoc['forecast']['txt_forecast']['forecastday'][0]['fcttext']
+        self._mobjects.append(data)
 
-            """
-            print name
-            print condition
-            print updated
-            print temperature
-            print forecast
-            """
+        """
+        print data.name
+        print data.condition
+        print data.updated
+        print data.temperature
+        print data.forecast
+        """
 
     @property
     def name(self):
@@ -57,3 +58,11 @@ class WunderData(object):
         self.condition = ''
         self.temperature = ''
         self.forecast = ''
+        self.current = ''
+        self.curmess = ''
+        self.day1 = ''
+        self.d1mess = ''
+        self.day2 = ''
+        self.d2mess = ''
+        self.day3 = ''
+        self.d3mess = ''
