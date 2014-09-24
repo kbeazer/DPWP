@@ -3,7 +3,7 @@ body{
     background-color: #efefef;
     margin: 0 auto;
 }
-img{
+.background{
     width: 100%;
     margin-top: 20px;
 }
@@ -26,15 +26,26 @@ h2{
 }
 input[type="text"]{
     font-size: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
     width: 60%;
     height: 30px;
     padding-left: 20px;
-    margin: 60px 16%;
+    margin: 30px 18%;
 }
 input[type="submit"]{
     font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
     width: 200px;
     padding: 10px;
     background-color: #c9b91c;
-    margin-left: 36%;
+    margin-left: 37%;
+    border: 1px solid #255176;
+}
+input[type="submit"]:hover{
+    background-color: #255176;
+    color: #efeace;
+}
+.userInput{
+    background-color: #fff;
+    padding-bottom: 20px;
 }

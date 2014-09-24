@@ -47,7 +47,7 @@ class Page(object):
     </head>
     <body>
         <div id="container">
-            <img src="images/wedback.jpg"/ height="200">
+            <img src="images/wedback.jpg" class="background" height="200" />
             <h1>WundaWeath Application</h1>
             <h2>Find out current weather conditions in your city.</h2>
         </div>
@@ -69,8 +69,8 @@ class UserForm(Page):  # THIS USER FORM CLASS INHERITS THE ATTRIBUTES OF THE PAG
     def __init__(self):
         super(UserForm, self).__init__()  # Page.__init__()
         # create a form to hold user inputs
-        self._form_open = '<form method="GET">'
-        self._form_close = '</form>'
+        self._form_open = '<div class="userInput">' + '<form method="GET">'
+        self._form_close = '</form>' + '</div>'
         self.__inputs = []  # inputs variable is made private by adding the prefix __
         self._form_inputs = ''
 

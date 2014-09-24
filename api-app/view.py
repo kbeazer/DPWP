@@ -6,14 +6,15 @@ class WunderView(object):
 
     def update(self):
         for obj in self.__sobject:
-            self.__content += obj.updated + "<br />"
-            self.__content += "    LOCATION: " + obj.name + "<br />"
-            self.__content += "    CONDITION: " + obj.condition + '<br />'
-            self.__content += "   TEMPERATURE: " + obj.temperature + "<br />"
-            self.__content += "   FORECAST: " + obj.forecast + "<br />"
-            self.__content += "  4-DAY FORECAST" + "<br />"
-            self.__content += obj.current + "<br />"
-            self.__content += obj.curmess + "<br />"
+            self.__content += '<p>' + obj.updated + '</p>' + "<br />"
+            self.__content += '<h3>' + obj.name + '</h3>' + "<br />"
+            self.__content += '<p>' + "Weather Conditions: " + obj.condition + '</p>' + '<br />'
+            self.__content += '<p>' + "Temperature: " + obj.temperature + '</p>' + "<br />"
+            self.__content += '<div class="forecast">' + '<h3>Forecast</h3>' + '<p>' + obj.forecast + '</p>' + \
+                              '</div>' + "<br />"
+            self.__content += '<div class="4-column">' + '<h3>4-Day Forecast</h3>' + "<br />"
+            self.__content += '<div class="current column">' + '<p>' + '<strong>' + obj.current + '</strong>' + \
+                              '</p>' + "<br />"
 
             if obj.curimg == "sunny":
                 self.__content += '<img src="images/sunny.png" />' + '<br />'
@@ -27,11 +28,15 @@ class WunderView(object):
                 self.__content += '<img src="images/chancerain.png" />' + '<br />'
             elif obj.curimg == "partlycloudy":
                 self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+            elif obj.curimg == "mostlycloudy":
+                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
             else:
                 print obj.curimg
 
-            self.__content += obj.day1 + "<br />"
-            self.__content += obj.d1mess + "<br />"
+            self.__content += '<p>' + obj.curmess + '</p>' + '</div>' + "<br />"
+
+            self.__content += '<div class="day1 column">' + '<p>' + '<strong>' + obj.day1 + '</strong>' +\
+                              '</p>' + '<br />'
 
             if obj.d1img == "sunny":
                 self.__content += '<img src="images/sunny.png" />' + '<br />'
@@ -45,11 +50,14 @@ class WunderView(object):
                 self.__content += '<img src="images/chancerain.png" />' + '<br />'
             elif obj.d1img == "partlycloudy":
                 self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+            elif obj.d1img == "mostlycloudy":
+                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
             else:
                 print obj.d1img
 
+            self.__content += '<p>' + obj.d1mess + '</p>' + '</div>' + "<br />"
+
             self.__content += obj.day2 + "<br />"
-            self.__content += obj.d2mess + "<br />"
 
             if obj.d2img == "sunny":
                 self.__content += '<img src="images/sunny.png />' + '<br />'
@@ -63,11 +71,14 @@ class WunderView(object):
                 self.__content += '<img src="images/chancerain.png" />' + '<br />'
             elif obj.d2img == "partlycloudy":
                 self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+            elif obj.d2img == "mostlycloudy":
+                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
             else:
                 print obj.d2img
 
+            self.__content += obj.d2mess + "<br />"
+
             self.__content += obj.day3 + "<br />"
-            self.__content += obj.d3mess + "<br />"
 
             if obj.d3img == "sunny":
                 self.__content += '<img src="images/sunny.png" />' + '<br />'
@@ -81,8 +92,12 @@ class WunderView(object):
                 self.__content += '<img src="images/chancerain.png" />' + '<br />'
             elif obj.d3img == "partlycloudy":
                 self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+            elif obj.d3img == "mostlycloudy":
+                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
             else:
                 print obj.d3img
+
+            self.__content += obj.d3mess + "<br />"
 
     @property
     def content(self):
