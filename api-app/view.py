@@ -17,89 +17,89 @@ class WunderView(object):
                               '</p>' + "<br />"
 
             if obj.curimg == "sunny":
-                self.__content += '<img src="images/sunny.png" />' + '<br />'
+                self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
             elif obj.curimg == "cloudy":
-                self.__content += '<img src="images/cloudy.png" />' + '<br />'
+                self.__content += '<img src="images/cloudy.png" class="image" />' + '<br />'
             elif obj.curimg == "chancetstorms":
-                self.__content += '<img src="images/chancetstorms.png" />' + '<br />'
+                self.__content += '<img src="images/chancetstorms.png" class="image" />' + '<br />'
             elif obj.curimg == "tstorms":
-                self.__content += '<img src="images/tstorms.png" />' + '<br />'
+                self.__content += '<img src="images/tstorms.png" class="image" />' + '<br />'
             elif obj.curimg == "chancerain":
-                self.__content += '<img src="images/chancerain.png" />' + '<br />'
+                self.__content += '<img src="images/chancerain.png" class="image" />' + '<br />'
             elif obj.curimg == "partlycloudy":
-                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+                self.__content += '<img src="images/partlycloudy.png" class="image" />' + '<br />'
             elif obj.curimg == "mostlycloudy":
-                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+                self.__content += '<img src="images/partlycloudy.png" class="image" />' + '<br />'
             else:
                 print obj.curimg
 
-            self.__content += '<p>' + obj.curmess + '</p>' + '</div>' + "<br />"
+            self.__content += '<p class="message">' + obj.curmess + '</p>' + '</div>' + "<br />"
 
             self.__content += '<div class="day1 column">' + '<p>' + '<strong>' + obj.day1 + '</strong>' +\
                               '</p>' + '<br />'
 
             if obj.d1img == "sunny":
-                self.__content += '<img src="images/sunny.png" />' + '<br />'
+                self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
             elif obj.d1img == "cloudy":
-                self.__content += '<img src="images/cloudy.png" />' + '<br />'
+                self.__content += '<img src="images/cloudy.png" class="image" />' + '<br />'
             elif obj.d1img == "chancetstorms":
-                self.__content += '<img src="images/chancetstorms.png" />' + '<br />'
+                self.__content += '<img src="images/chancetstorms.png" class="image" />' + '<br />'
             elif obj.d1img == "tstorms":
-                self.__content += '<img src="images/tstorms.png" />' + '<br />'
+                self.__content += '<img src="images/tstorms.png" class="image" />' + '<br />'
             elif obj.d1img == "chancerain":
-                self.__content += '<img src="images/chancerain.png" />' + '<br />'
+                self.__content += '<img src="images/chancerain.png" class="image" />' + '<br />'
             elif obj.d1img == "partlycloudy":
-                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+                self.__content += '<img src="images/partlycloudy.png" class="image" />' + '<br />'
             elif obj.d1img == "mostlycloudy":
-                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+                self.__content += '<img src="images/partlycloudy.png" class="image" />' + '<br />'
             else:
                 print obj.d1img
 
-            self.__content += '<p>' + obj.d1mess + '</p>' + '</div>' + "<br />"
+            self.__content += '<p class="message">' + obj.d1mess + '</p>' + '</div>' + "<br />"
 
             self.__content += '<div class="day2 column">' + '<p>' + '<strong>' + obj.day2 + '</strong>' + \
                               '</p>' + '<br />'
 
             if obj.d2img == "sunny":
-                self.__content += '<img src="images/sunny.png />' + '<br />'
+                self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
             elif obj.d2img == "cloudy":
-                self.__content += '<img src="images/cloudy.png />' + '<br />'
+                self.__content += '<img src="images/cloudy.png" class="image" />' + '<br />'
             elif obj.d2img == "chancetstorms":
-                self.__content += '<img src="images/chancetstorms.png />' + '<br />'
+                self.__content += '<img src="images/chancetstorms.png" class="image" />' + '<br />'
             elif obj.d2img == "tstorms":
-                self.__content += '<img src="images/tstorms.png />' + '<br />'
+                self.__content += '<img src="images/tstorms.png" class="image" />' + '<br />'
             elif obj.d2img == "chancerain":
-                self.__content += '<img src="images/chancerain.png" />' + '<br />'
+                self.__content += '<img src="images/chancerain.png" class="image" />' + '<br />'
             elif obj.d2img == "partlycloudy":
-                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+                self.__content += '<img src="images/partlycloudy.png" class="image" />' + '<br />'
             elif obj.d2img == "mostlycloudy":
-                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+                self.__content += '<img src="images/partlycloudy.png" class="image" />' + '<br />'
             else:
                 print obj.d2img
 
-            self.__content += '<p>' + obj.d2mess + '</p>' + '</div>' + "<br />"
+            self.__content += '<p class="message">' + obj.d2mess + '</p>' + '</div>' + "<br />"
 
             self.__content += '<div class="day3 column">' + '<p>' + '<strong>' + obj.day3 + '</strong>' + \
                               '</p>' + '<br />'
 
             if obj.d3img == "sunny":
-                self.__content += '<img src="images/sunny.png" />' + '<br />'
+                self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
             elif obj.d3img == "cloudy":
-                self.__content += '<img src="images/cloudy.png" />' + '<br />'
+                self.__content += '<img src="images/cloudy.png" class="image" />' + '<br />'
             elif obj.d3img == "chancetstorms":
-                self.__content += '<img src="images/chancetstorms.png" />' + '<br />'
+                self.__content += '<img src="images/chancetstorms.png" class="image" />' + '<br />'
             elif obj.d3img == "tstorms":
-                self.__content += '<img src="images/tstorms.png" />' + '<br />'
+                self.__content += '<img src="images/tstorms.png" class="image" />' + '<br />'
             elif obj.d3img == "chancerain":
-                self.__content += '<img src="images/chancerain.png" />' + '<br />'
+                self.__content += '<img src="images/chancerain.png" class="image" />' + '<br />'
             elif obj.d3img == "partlycloudy":
-                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+                self.__content += '<img src="images/partlycloudy.png" class="image" />' + '<br />'
             elif obj.d3img == "mostlycloudy":
-                self.__content += '<img src="images/partlycloudy.png" />' + '<br />'
+                self.__content += '<img src="images/partlycloudy.png" class="image" />' + '<br />'
             else:
                 print obj.d3img
 
-            self.__content += '<p>' + obj.d3mess + '</p>' + '</div>' + '</div>' + '<br />'
+            self.__content += '<p class="message">' + obj.d3mess + '</p>' + '</div>' + '</div>' + '<br />'
 
     @property
     def content(self):
