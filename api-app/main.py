@@ -34,7 +34,7 @@ class MainHandler(webapp2.RequestHandler):
 class Page(object):
     """ this class is used as a template to display the results from the User Form """
     def __init__(self):  # constructor function
-        self.title = "Dotlent Weather"  # assign title to attribute
+        self.title = "WundaWeath API"  # assign title to attribute
         self.css = "css/style.css"  # assign the css file to attribute
         self._head = """
 <!DOCTYPE HTML>

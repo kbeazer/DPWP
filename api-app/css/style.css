@@ -1,35 +1,67 @@
+#container{
+    background-color: #fff;
+    padding: 20px;
+}
+.background{
+    width: 100%;
+    margin-top: 20px;
+}
 .column{
     background-color: #fff;
     display: inline-block;
     padding: 20px;
     width: 20.28%;
 }
-body{
-    width: 60%;
-    background-color: #efefef;
-    margin: 0 auto;
-}
-.background{
-    width: 100%;
-    margin-top: 20px;
-}
-#container{
-    background-color: #fff;
-    padding: 20px;
-}
 .image{
-    float: left;
-}
-.message{
-    width: 100%;
-    <!--padding-left: 40px;-->
-    display: inline-block;
     float: left;
 }
 .region{
     background-color: #fff;
     padding: 20px;
     margin: 0;
+}
+.lineup{
+    display: inline-block;
+    margin-top: 0;
+}
+.update{
+    padding-left: 10px;
+}
+.forecast{
+    background-color: #fff;
+    padding: 20px;
+}
+.message{
+    width: 100%;
+    display: inline-block;
+    float: left;
+}
+.title{
+    text-align: center;
+    background-color: #255176;
+    padding: 10px;
+    color: #efeace;
+    margin: 0;
+}
+.forecast h3{
+    margin-top: 0;
+}
+.current{
+    float: left;
+}
+.day1{
+    float: left;
+}
+.day2{
+    float: left;
+}
+.day3{
+    float: left;
+}
+body{
+    width: 60%;
+    background-color: #efefef;
+    margin: 0 auto;
 }
 h1{
     background-color: #255176;
@@ -50,6 +82,14 @@ h3{
 p{
     font-family: 'PT Sans Narrow', sans-serif;
     margin: 0;
+}
+footer p{
+    text-align: center;
+    padding: 5px;
+    background-color: #255176;
+    color: #efeace;
+    font-size: 14px;
+    margin-bottom: 30px;
 }
 input[type="text"]{
     font-size: 20px;
@@ -77,49 +117,7 @@ input[type="submit"]:hover{
     background-color: #fff;
     padding: 30px 0;
 }
-.4-column{
-    width: 100%;
-    display: inline-block;
-    background-color: yellow;
-}
-.title{
-    text-align: center;
-    background-color: #255176;
-    padding: 10px;
-    color: #efeace;
-    margin: 0;
-}
-.lineup{
-    display: inline-block;
-    margin-top: 0;
-}
-.update{
-    padding-left: 10px;
-}
-.forecast{
-    background-color: #fff;
-    padding: 20px;
-}
-.forecast h3{
-    margin-top: 0;
-}
-footer p{
-    text-align: center;
-    padding: 5px;
-    background-color: #255176;
-    color: #efeace;
-    font-size: 14px;
-    margin-bottom: 30px;
-}
-.current{
-    float: left;
-}
-.day1{
-    float: left;
-}
-.day2{
-    float: left;
-}
-.day3{
-    float: left;
-}
+
+
+
+

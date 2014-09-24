@@ -1,7 +1,7 @@
 class WunderView(object):
     """ this class shows the data that will be available to the user """
     def __init__(self):
-        self.__sobject = []
+        self.__sobject = []  # create an array to store data objects received from the model.
         self.__content = '<br />'
 
     def update(self):
@@ -17,6 +17,8 @@ class WunderView(object):
                               '</p>' + "<br />"
 
             if obj.curimg == "sunny":
+                self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
+            elif obj.curimg == "clear":
                 self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
             elif obj.curimg == "cloudy":
                 self.__content += '<img src="images/cloudy.png" class="image" />' + '<br />'
@@ -40,6 +42,8 @@ class WunderView(object):
 
             if obj.d1img == "sunny":
                 self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
+            elif obj.d1img == "clear":
+                self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
             elif obj.d1img == "cloudy":
                 self.__content += '<img src="images/cloudy.png" class="image" />' + '<br />'
             elif obj.d1img == "chancetstorms":
@@ -62,6 +66,8 @@ class WunderView(object):
 
             if obj.d2img == "sunny":
                 self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
+            elif obj.d2img == "clear":
+                self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
             elif obj.d2img == "cloudy":
                 self.__content += '<img src="images/cloudy.png" class="image" />' + '<br />'
             elif obj.d2img == "chancetstorms":
@@ -83,6 +89,8 @@ class WunderView(object):
                               '</p>' + '<br />'
 
             if obj.d3img == "sunny":
+                self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
+            elif obj.d3img == "clear":
                 self.__content += '<img src="images/sunny.png" class="image" />' + '<br />'
             elif obj.d3img == "cloudy":
                 self.__content += '<img src="images/cloudy.png" class="image" />' + '<br />'
