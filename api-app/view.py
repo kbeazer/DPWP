@@ -57,7 +57,8 @@ class WunderView(object):
 
             self.__content += '<p>' + obj.d1mess + '</p>' + '</div>' + "<br />"
 
-            self.__content += obj.day2 + "<br />"
+            self.__content += '<div class="day2 column">' + '<p>' + '<strong>' + obj.day2 + '</strong>' + \
+                              '</p>' + '<br />'
 
             if obj.d2img == "sunny":
                 self.__content += '<img src="images/sunny.png />' + '<br />'
@@ -76,9 +77,10 @@ class WunderView(object):
             else:
                 print obj.d2img
 
-            self.__content += obj.d2mess + "<br />"
+            self.__content += '<p>' + obj.d2mess + '</p>' + '</div>' + "<br />"
 
-            self.__content += obj.day3 + "<br />"
+            self.__content += '<div class="day3 column">' + '<p>' + '<strong>' + obj.day3 + '</strong>' + \
+                              '</p>' + '<br />'
 
             if obj.d3img == "sunny":
                 self.__content += '<img src="images/sunny.png" />' + '<br />'
@@ -97,7 +99,7 @@ class WunderView(object):
             else:
                 print obj.d3img
 
-            self.__content += obj.d3mess + "<br />"
+            self.__content += '<p>' + obj.d3mess + '</p>' + '</div>' + '</div>' + '<br />'
 
     @property
     def content(self):
