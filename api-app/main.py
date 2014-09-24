@@ -54,6 +54,7 @@ class Page(object):
         """
         self._body = ""
         self._close = """
+        <footer><p>WundaWeath 2014 &copy</p></footer>
     </body>
 </html>
         """

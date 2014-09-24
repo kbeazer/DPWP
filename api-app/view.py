@@ -6,13 +6,13 @@ class WunderView(object):
 
     def update(self):
         for obj in self.__sobject:
-            self.__content += '<p>' + obj.updated + '</p>' + "<br />"
-            self.__content += '<h3>' + obj.name + '</h3>' + "<br />"
+            self.__content += '<div class="region">' + '<h3 class="lineup">' + obj.name + '</h3>' + \
+                              '<p class="lineup update">' + obj.updated + '</p>' + '<br />'
             self.__content += '<p>' + "Weather Conditions: " + obj.condition + '</p>' + '<br />'
-            self.__content += '<p>' + "Temperature: " + obj.temperature + '</p>' + "<br />"
+            self.__content += '<p>' + "Temperature: " + obj.temperature + '</p>' + '</div>' + '<br />'
             self.__content += '<div class="forecast">' + '<h3>Forecast</h3>' + '<p>' + obj.forecast + '</p>' + \
                               '</div>' + "<br />"
-            self.__content += '<div class="4-column">' + '<h3>4-Day Forecast</h3>' + "<br />"
+            self.__content += '<div class="4-column">' + '<h3 class="title">4-Day Forecast</h3>' + "<br />"
             self.__content += '<div class="current column">' + '<p>' + '<strong>' + obj.current + '</strong>' + \
                               '</p>' + "<br />"
 
