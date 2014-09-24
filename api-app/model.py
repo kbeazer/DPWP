@@ -19,7 +19,8 @@ class WunderModel(object):
         # parsing the json
         jsondoc = json.load(result)
 
-        data = WunderData()
+        data = WunderData()  # store the database in a variable
+        # Search through the json api and grab information to send to the view
         data.updated = jsondoc['current_observation']['observation_time']
         data.name = jsondoc['current_observation']['display_location']['full']
         data.condition = jsondoc['current_observation']['weather']
@@ -37,11 +38,7 @@ class WunderModel(object):
         data.day3 = jsondoc['forecast']['txt_forecast']['forecastday'][6]['title']
         data.d3mess = jsondoc['forecast']['txt_forecast']['forecastday'][6]['fcttext']
         data.d3img = jsondoc['forecast']['txt_forecast']['forecastday'][6]['icon']
-        self._mobjects.append(data)
-
-    @property
-    def name(self):
-        return self.name
+        self._mobjects.append(data)  # add data object to the mobjects array
 
     @property
     def search(self):
@@ -52,7 +49,7 @@ class WunderModel(object):
         self.__search = s
 
 
-class WunderData(object):
+class WunderData(object):  # THIS PAGE CLASS IS AN EXAMPLE OF AN ABSTRACT CLASS.  IT IS BEING USED AS A TEMPLATE.
     """ this data object holds the data fetched by the model and shown by the view """
     def __init__(self):
         self.updated = ''
