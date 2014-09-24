@@ -110,7 +110,6 @@ class WeatherData(object):
         self.date = ''
 
 
-
 class Page(object):
     def __init__(self):
         self._head = """

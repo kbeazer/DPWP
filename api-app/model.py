@@ -39,8 +39,6 @@ class WunderModel(object):
         data.d3img = jsondoc['forecast']['txt_forecast']['forecastday'][6]['icon']
         self._mobjects.append(data)
 
-
-
     @property
     def name(self):
         return self.name

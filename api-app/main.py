@@ -32,11 +32,14 @@ class MainHandler(webapp2.RequestHandler):
 
 class Page(object):  # THIS PAGE CLASS IS AN EXAMPLE OF AN ABSTRACT CLASS.  IT IS BEING USED AS A TEMPLATE.
     def __init__(self):
+        self.title = "Dotlent Weather"
+        self.css = "css/style.css"
         self._head = """
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title></title>
+        <title>{self.title}</title>
+        <link href="{self.css}" type="stylesheet" text="css/text" />
     </head>
     <body>
         """
@@ -47,7 +50,9 @@ class Page(object):  # THIS PAGE CLASS IS AN EXAMPLE OF AN ABSTRACT CLASS.  IT I
         """
 
     def print_out(self):
-        return self._head + self._body + self._close
+        all = self._head + self._body + self._close
+        all = all.format(**locals())
+        return all
 
 
 class UserForm(Page):  # THIS USER FORM CLASS INHERITS THE ATTRIBUTES OF THE PAGE CLASS.
@@ -76,11 +81,11 @@ class UserForm(Page):  # THIS USER FORM CLASS INHERITS THE ATTRIBUTES OF THE PAG
             except:
                 self._form_inputs += '" required />'
 
-        print self._form_inputs
-
     # THIS PRINTOUT USES POLYMORPHIS BY OVERRIDING THE PRINT FEATURE OF ITS PARENT CLASS (PAGE).
     def print_out(self):
-        return self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
+        all = self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
+        all = all.format(**locals())
+        return all
 
 
 app = webapp2.WSGIApplication([

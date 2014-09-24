@@ -26,12 +26,11 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6115108" vertical-offset="85" max-vertical-offset="780">
-              <caret line="34" column="107" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="107" />
+            <state vertical-scroll-proportion="0.23741007" vertical-offset="0" max-vertical-offset="1215">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#101#115#0" expanded="true" />
                 <element signature="e#1278#1587#0" expanded="false" />
-                <element signature="e#1616#2752#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -162,7 +161,6 @@
           <folding>
             <element signature="e#101#115#0" expanded="true" />
             <element signature="e#1278#1587#0" expanded="false" />
-            <element signature="e#1616#2752#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -174,7 +172,6 @@
           <folding>
             <element signature="e#101#115#0" expanded="true" />
             <element signature="e#1278#1587#0" expanded="false" />
-            <element signature="e#1616#2752#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -186,7 +183,6 @@
           <folding>
             <element signature="e#101#115#0" expanded="true" />
             <element signature="e#1278#1587#0" expanded="false" />
-            <element signature="e#1616#2752#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -198,7 +194,6 @@
           <folding>
             <element signature="e#101#115#0" expanded="true" />
             <element signature="e#1278#1587#0" expanded="false" />
-            <element signature="e#1616#2752#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -212,12 +207,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6115108" vertical-offset="85" max-vertical-offset="780">
-          <caret line="34" column="107" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="107" />
+        <state vertical-scroll-proportion="0.23741007" vertical-offset="0" max-vertical-offset="1215">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#101#115#0" expanded="true" />
             <element signature="e#1278#1587#0" expanded="false" />
-            <element signature="e#1616#2752#0" expanded="false" />
           </folding>
         </state>
       </provider>
