@@ -12,10 +12,10 @@ from model import WunderModel
 from view import WunderView
 
 
-class MainHandler(webapp2.RequestHandler):
+class MainHandler(webapp2.RequestHandler):  # main handler class/ catalyst
     def get(self):
-        f = UserForm()
-        f.inputs = [['zip', 'text', 'enter a zipcode'], ['Submit', 'submit']]
+        f = UserForm()  # assign User Form class to a variable
+        f.inputs = [['zip', 'text', 'enter a zipcode'], ['Submit', 'submit']]  # array to hold user input
 
         if self.request.GET:  # only if there is a zip variable in the url
 
@@ -27,13 +27,13 @@ class MainHandler(webapp2.RequestHandler):
             v.sobject = m._mobjects  # takes the data objects from the Model class and sends them to the View
             f._body = v.content
 
-        self.response.write(f.print_out())
+        self.response.write(f.print_out())  # print out the result of the User Form class to the view
 
 
 class Page(object):  # THIS PAGE CLASS IS AN EXAMPLE OF AN ABSTRACT CLASS.  IT IS BEING USED AS A TEMPLATE.
-    def __init__(self):
-        self.title = "Dotlent Weather"
-        self.css = "css/style.css"
+    def __init__(self):  # constructor function
+        self.title = "Dotlent Weather"  # assign title to attribute
+        self.css = "css/style.css"  # assign the css file to attribute
         self._head = """
 <!DOCTYPE HTML>
 <html>
@@ -50,7 +50,7 @@ class Page(object):  # THIS PAGE CLASS IS AN EXAMPLE OF AN ABSTRACT CLASS.  IT I
         """
 
     def print_out(self):
-        all = self._head + self._body + self._close
+        all = self._head + self._body + self._close  # concatenate entire page into 1 variable
         all = all.format(**locals())
         return all
 
@@ -83,7 +83,7 @@ class UserForm(Page):  # THIS USER FORM CLASS INHERITS THE ATTRIBUTES OF THE PAG
 
     # THIS PRINTOUT USES POLYMORPHIS BY OVERRIDING THE PRINT FEATURE OF ITS PARENT CLASS (PAGE).
     def print_out(self):
-        all = self._head + self._body + self._form_open + self._form_inputs + self._form_close + self._close
+        all = self._head + self._form_open + self._form_inputs + self._form_close + self._body + self._close
         all = all.format(**locals())
         return all
 
